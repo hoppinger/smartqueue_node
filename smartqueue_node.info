@@ -1,0 +1,8 @@
+name = Smartqueue node
+description = Creates a node queue for each node type
+package = Nodequeue
+core = 7.x
+dependencies[] = nodequeue 
+dependencies[] = smartqueue 
+
+
