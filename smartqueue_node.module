@@ -147,7 +147,8 @@ function smartqueue_node_nodequeue_subqueues(&$queue, $node) {
   // Create subqueues if needed.
   foreach ($references as $reference) {
     if (empty($exists[$reference])) {
-      nodequeue_add_subqueue($queue, smartqueue_node_nodequeue_subqueue_title($queue, $reference), $reference);
+      $ref_node = node_load($reference);
+      nodequeue_add_subqueue($queue, $ref_node->title, $reference);
     }
   }
 
